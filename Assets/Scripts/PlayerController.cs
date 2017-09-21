@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public Text countText;
     public Text winText;
-
+    public GameObject floor;
     private Rigidbody rb;
 
     private int count;
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.CompareTag("destroy"))
         {
             other.gameObject.SetActive(false);
@@ -50,9 +51,10 @@ public class PlayerController : MonoBehaviour {
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >=8)
+        if (count == 8)
         {
-            winText.text = "You Win!";
+            winText.text = "Find the hidden path!";
+            floor.SetActive(false);
         }
     }
 }
