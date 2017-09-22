@@ -51,10 +51,51 @@ public class PlayerController : MonoBehaviour {
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
+        if (count == 1)
+        {
+            speed = speed - 1;
+        }
+        if (count == 2)
+        {
+            speed = speed - 1;
+        }
+        if (count == 3)
+        {
+            speed = speed - 1;
+        }
+        if (count == 4)
+        {
+            speed = speed - 1;
+        }
+        if (count == 5)
+        {
+            speed = speed - 1;
+        }
+        if (count == 6)
+        {
+            speed = speed - 1;
+        }
+        if (count == 7)
+        {
+            speed = speed - 1;
+        }
         if (count == 8)
         {
-            winText.text = "Find the hidden path!";
+            speed = speed - 1;
+        }
+        if (count == 9)
+        {
+            speed = speed + 10;
+        }
+        if (count == 8)
+        {
+            winText.text = "Drop Down!";
             floor.SetActive(false);
+        }
+        if (count == 16)
+        {
+            speed = speed - 12;
+            winText.text = "You Win!";
         }
     }
 }
